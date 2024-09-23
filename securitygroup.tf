@@ -27,3 +27,21 @@ resource "aws_security_group" "mysg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+
+#provider.tf
+provider.tf
+provider "aws" {
+  region = "ap-south-1"
+}
+                        
+#Attach Security group to instance
+#sg.tf
+resource "aws_instance" "myserver"{
+tags={
+Name="Terrafrom_instance"
+}
+ami="ami-0522ab6e1ddcc7055"
+instance_type="t2.micro"
+key_name="Jenkinskeypem"
+vpc_security_group_ids= [aws_security_group.mysg.id]
+}
