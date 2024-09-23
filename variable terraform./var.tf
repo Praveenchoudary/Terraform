@@ -8,3 +8,11 @@ variable "itype" {
   type    = string
   default = "t2.micro"
 }
+variable "volume" {
+  type    = number
+  default = 10
+}
+variable "icount" {
+  type    = number
+  default= 1
+}
