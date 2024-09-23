@@ -253,4 +253,3 @@ vpc_security_group_ids= [aws_security_group.mysg.id]
 }
  
 Ec2 instance is created with security group.
-                 
