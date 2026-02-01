@@ -18,7 +18,7 @@ jobs:
       - name: Fetch Keys from Vault
         uses: hashicorp/vault-action@v3
         with:
-          url: 54.145.207.12:8200
+          url: http://54.145.207.12:8200
           role: gh-actions-role
           method: jwt
           secrets: |
